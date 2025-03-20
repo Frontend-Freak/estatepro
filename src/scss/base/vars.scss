@@ -1,0 +1,34 @@
+:root {
+    // primary colors
+    --primary-color-1: #f15a29;
+
+    // secondary colors
+    --secondary-color-1: #e6440f;
+    --secondary-color-2: #fef4f1;
+
+    // neutral colors
+    --neutral-color-800: #070707;
+    --neutral-color-700: #303030;
+    --neutral-color-600: #5a5a5a;
+    --neutral-color-500: #838383;
+    --neutral-color-400: #acacac;
+    --neutral-color-300: #d6d6d6;
+    --neutral-color-200: #f3f3f3;
+    --neutral-color-100: #fff;
+
+    // container
+    --container-padding: 15px;
+    --container-width: 1240px;
+
+    @include mini-desktop {
+        --container-width: 1000px;
+    }
+
+    @include tablet {
+        --container-width: 924px;
+    }
+
+    @include mobile {
+        --container-width: 340px;
+    }
+}
