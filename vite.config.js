@@ -5,7 +5,7 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 export default defineConfig({
     root: './src', //сборка из папки src
-    base: '/Estate-Pro/', // репозиторий
+    base: '/', // репозиторий
     server: {
         port: 3000, //(запуск на 3000 порту)
         open: true, //(настройка чтобы страница открывалась по умолчанию в браузере
