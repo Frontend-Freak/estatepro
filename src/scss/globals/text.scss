@@ -10,7 +10,7 @@
             font-size: 40px;
         }
 
-        @include small-mobile {
+        @include mobile {
             font-size: 34px;
         }
     }
@@ -26,7 +26,7 @@
             font-size: 36px;
         }
 
-        @include small-mobile {
+        @include mobile {
             font-size: 30px;
         }
     }
@@ -42,7 +42,7 @@
             font-size: 26px;
         }
 
-        @include small-mobile {
+        @include mobile {
             font-size: 24px;
         }
     }
@@ -66,7 +66,7 @@
             font-size: 24px;
         }
 
-        @include small-mobile {
+        @include mobile {
             font-size: 22px;
         }
     }
@@ -99,7 +99,7 @@
                 font-size: 24px;
             }
 
-            @include small-mobile {
+            @include mobile {
                 font-size: 20px;
             }
 
@@ -111,7 +111,7 @@
                 background-color: var(--neutral-color-100);
                 transform: translateY(-43px);
 
-                @include mini-desktop {
+                @include desktop {
                     display: none;
                 }
             }

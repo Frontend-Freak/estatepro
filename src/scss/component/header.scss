@@ -3,6 +3,10 @@
     color: var(--neutral-color-100);
     background-color: var(--neutral-color-800);
 
+    @include mobile{
+        padding: 18px 0;
+    }
+
     &__container {
         @include flex-all-between;
     }
@@ -12,17 +16,28 @@
         gap: 40px;
     }
 
+    &__logo {
+        @include mobile {
+            width: 149px;
+            height: 34px;
+        }
+    }
+
     &__button {
         position: relative;
         border-radius: 12px;
         padding: 20px 40px 20px 24px;
         background-color: var(--neutral-color-100);
 
-        &-link{
+        @include mobile {
+            display: none;
+        }
+
+        &-link {
             position: relative;
             font-weight: 700;
 
-            &::before{
+            &::before {
                 content: '';
                 position: absolute;
                 top: 2px;
@@ -30,20 +45,9 @@
                 display: inline-block;
                 width: 14px;
                 height: 12px;
-                background: url("../assets/icons/arrow-right.svg")
+                background: url('../assets/icons/arrow-right.svg');
             }
         }
-
-        /* &::before{
-            content: '';
-            position: absolute;
-            right: 7px;
-            top: 23px;
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            background: url(./assets/icons/arrow-right.svg)
-        } */
     }
 }
 
@@ -51,12 +55,56 @@
     &__list {
         @include flex-all-center;
         gap: 40px;
+
+        @include mobile {
+            position: fixed;
+            top: 0;
+            left: -100vw;
+            z-index: var(--z-index-3);
+            flex-direction: column;
+            justify-content: center;
+            width: 80dvw;
+            height: 100dvh;
+            background-color: var(--neutral-color-100);
+            opacity: 0;
+            color: var(--neutral-color-800);
+            visibility: hidden;
+            transition: left var(--transition), opacity var(--transition), visibility var(--transition);
+        }
+
+        &--visible {
+            left: 0;
+            opacity: 1;
+            visibility: visible;
+        }
     }
 
-    &__link{
+    &__link {
         font-weight: 400;
-font-size: 18px;
-line-height: 1.11;
-opacity: 0.7;
+        font-size: 18px;
+        line-height: 1.11;
+        opacity: 0.7;
     }
+}
+.overlay {
+    @include mobile {
+        position: fixed;
+        inset: 0;
+        z-index: var(--z-index-2);
+        background-color: #000000b3;
+        opacity: 0;
+        visibility: hidden;
+        transition:
+            opacity var(--transition),
+            visibility var(--transition);
+
+        &--visible {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.burger {
+    @include burger;
 }

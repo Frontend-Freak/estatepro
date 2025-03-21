@@ -1,43 +1,40 @@
+<div class="overlay" data-burger="overlay"></div>
 <header class="header">
     <div class="header__container container">
         <div class="header__left">
             <div class="header__logo">
-                <img src="./assets/icons/logo.svg" width="176" height="40" alt="">
+                <img
+                    src="./assets/icons/logo.svg"
+                    width="176"
+                    height="40"
+                    alt=""
+                />
             </div>
-            <nav class="header__nav nav">
-                <ul class="nav__list">
+            <nav class="header__nav nav" >
+                <ul class="nav__list" data-burger="menu">
                     <li class="nav__item">
-                        <a href="/" class="nav__link">
-                            Home
-                        </a>
+                        <a href="/" class="nav__link"> Home </a>
                     </li>
                     <li class="nav__item">
-                        <a href="/" class="nav__link">
-                            About
-                        </a>
+                        <a href="/" class="nav__link"> About </a>
                     </li>
                     <li class="nav__item">
-                        <a href="/" class="nav__link">
-                            Properties
-                        </a>
+                        <a href="/" class="nav__link"> Properties </a>
                     </li>
                     <li class="nav__item">
-                        <a href="/" class="nav__link">
-                            Agents
-                        </a>
+                        <a href="/" class="nav__link"> Agents </a>
                     </li>
                     <li class="nav__item">
-                        <a href="/" class="nav__link">
-                            Blog
-                        </a>
+                        <a href="/" class="nav__link"> Blog </a>
                     </li>
                 </ul>
             </nav>
         </div>
         <button class="header__button button">
-            <a href="#!" class="header__button-link">
-                Get started
-            </a>
+            <a href="#!" class="header__button-link"> Get started </a>
+        </button>
+        <button class="burger" data-burger="btn" aria-label="Burger menu">
+            <span class="burger__line"></span>
         </button>
     </div>
 </header>
