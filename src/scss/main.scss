@@ -1,8 +1,8 @@
-@import './mixins';
-@import './base';
-@import './globals';
+@use './mixins';
+@use './base';
+@use './globals';
 
 
 //components
 
-@import './component/header';
+@use './component/header';
