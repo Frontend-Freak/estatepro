@@ -14,11 +14,11 @@
         margin-bottom: 60px;
         width: 100%;
 
-        @include tablet{
+        @include tablet {
             flex-direction: column;
         }
 
-        @include mobile{
+        @include mobile {
             gap: 32px;
         }
     }
@@ -28,7 +28,7 @@
         font-weight: 700;
         text-transform: capitalize;
 
-        @include mobile{
+        @include mobile {
             font-size: 50px;
         }
 
@@ -41,7 +41,7 @@
         width: 100%;
         max-width: 461px;
 
-        @include tablet{
+        @include tablet {
             max-width: 100%;
         }
 
@@ -89,7 +89,7 @@
         }
     }
 
-    &__bottom{
+    &__bottom {
         position: relative;
     }
 
@@ -97,7 +97,7 @@
         & img {
             border-radius: 10px;
 
-            @include mobile{
+            @include mobile {
                 height: 258px;
             }
         }
@@ -113,16 +113,16 @@
         height: 87px;
         background-color: var(--neutral-color-100);
 
-        @include tablet{
+        @include tablet {
             left: 135px;
         }
 
-        @include mobile{
+        @include mobile {
             bottom: -75px;
             left: 0;
             padding: 12px;
-            width: 380px;
             height: 60px;
+            max-width: 100%;
         }
 
         &-input {
@@ -131,14 +131,13 @@
             @include flex-all-between;
             margin-bottom: 1px;
 
-
             &::before {
-                content: url("./assets/icons/location.svg");
+                content: url('./assets/icons/location.svg');
                 position: absolute;
                 left: 25px;
                 display: inline-block;
 
-                @include mobile{
+                @include mobile {
                     left: -3px;
                 }
             }
@@ -147,27 +146,29 @@
         & input {
             margin-left: 66px;
 
-            @include mobile{
+            @include mobile {
                 margin-left: 28px;
+                font-size: 14px;
             }
         }
 
         &__button {
             border-radius: 10px;
             padding: 26px 37px 22px;
-            width: 188px;
+            width: 100%;
+            max-width: 188px;
             font-weight: 700;
             font-size: 20px;
             letter-spacing: 0.01em;
             color: var(--neutral-color-100);
             background-color: var(--primary-color-1);
 
-            @include mobile{
+            @include mobile {
                 padding: 10px 16px;
-                width: 112px;
+                width: 100%;
+                max-width: 112px;
                 font-size: 14px;
             }
         }
     }
 }
-
