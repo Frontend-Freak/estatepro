@@ -65,9 +65,9 @@
             justify-content: center;
             width: 80dvw;
             height: 100dvh;
+            color: var(--neutral-color-800);
             background-color: var(--neutral-color-100);
             opacity: 0;
-            color: var(--neutral-color-800);
             visibility: hidden;
             transition: left var(--transition), opacity var(--transition), visibility var(--transition);
         }
@@ -86,6 +86,7 @@
         opacity: 0.7;
     }
 }
+
 .overlay {
     @include tablet {
         position: fixed;
