@@ -127,6 +127,7 @@
 
         &-input {
             position: relative;
+            background-color: inherit;
 
             @include flex-all-between;
             margin-bottom: 1px;
