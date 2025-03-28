@@ -3,7 +3,8 @@
     &__container {
         @include flex-all-between;
 
-        padding: 123px 0 117px;
+        padding-top: 123px;
+        padding-bottom: 117px;
         position: relative;
 
         @include tablet{
@@ -23,12 +24,14 @@
         & ::after {
             content: '';
             position: absolute;
-            border: 1px solid #070707;
-            max-width: 1270px;
+            //border: 1px solid #070707;
+            max-width: 1240px;
             width: 100%;
+            height: 1px;
+            background-color: var(--neutral-color-800);
             bottom: 0;
-            left: 0;
-            opacity: 0.4;
+            left: 15px;
+            opacity: 0.1;
         }
     }
 
