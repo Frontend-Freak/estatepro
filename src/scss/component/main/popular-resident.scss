@@ -23,7 +23,7 @@
             }
 
             &::after {
-                content: url("./assets/icons/arrow-right-long.svg");
+                content: url("../assets/icons/arrow-right-long.svg");
                 position: absolute;
                 right: 0;
             }
@@ -238,7 +238,7 @@
                 }
 
                 &::before {
-                    content: url("./assets/icons/square-icon.svg");
+                    content: url("../assets/icons/square-icon.svg");
                     display: inline-block;
 
                     // height: 22.5px;
@@ -262,7 +262,7 @@
                 }
 
                 &::before {
-                    content: url("./assets/icons/bedroom-icon.svg");
+                    content: url("../assets/icons/bedroom-icon.svg");
                     top: 12px;
                     left: 60px;
 
@@ -281,7 +281,7 @@
                 }
 
                 &::before {
-                    content: url("./assets/icons/bathroom-icon.svg");
+                    content: url("../assets/icons/bathroom-icon.svg");
                     display: inline-block;
 
                     // position: absolute;
