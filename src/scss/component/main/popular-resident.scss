@@ -14,18 +14,18 @@
         @include flex-all-between;
 
         &-span {
-            padding-right: 42px;
             position: relative;
             margin-bottom: 30px;
+            padding-right: 42px;
 
             @include mobile{
                 visibility: hidden;
             }
 
             &::after {
-                content: url(./assets/icons/arrow-right-long.svg);
+                content: url("./assets/icons/arrow-right-long.svg");
                 position: absolute;
-                right: 0px;
+                right: 0;
             }
         }
     }
@@ -34,17 +34,16 @@
         margin-bottom: 42px;
 
         @include mobile{
-            font-size: 40px;
             margin-bottom: 40px;
+            font-size: 40px;
         }
     }
 
     &__grid {
         display: grid;
+        gap: 140px 78px;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        row-gap: 140px;
-        column-gap: 78px;
+        grid-template-rows: 60px auto 60px auto 60px;
 
         @include tablet {
             gap: 32px;
@@ -62,19 +61,18 @@
         }
 
         &-item--1 {
-            grid-row: span 1 / span 1;
+            grid-column: 1;
+            grid-row: 1 / 3;
         }
 
         &-item--2 {
-            grid-row: span 2 / span 2;
-            grid-column-start: 2;
-            grid-row-start: 2;
-            margin-top: -250px;
+            grid-column: 2;
+            grid-row: 2 / 4;
 
             @include tablet {
                 grid-column-start: 2;
                 grid-row-start: 1;
-                margin-top: 0px;
+                margin-top: 0;
             }
 
             @include mobile{
@@ -84,8 +82,7 @@
         }
 
         &-item--3 {
-            grid-row: span 2 / span 2;
-            grid-row-start: 3;
+            grid-row: 3 /5;
 
             @include tablet {
                 grid-column-start: 1;
@@ -99,15 +96,13 @@
         }
 
         &-item--4 {
-            grid-row: span 2 / span 2;
             grid-column-start: 2;
-            grid-row-start: 4;
-            margin-top: -245px;
+            grid-row: 4 / 6;
 
             @include tablet {
-                margin-top: 0px;
                 grid-column-start: 2;
                 grid-row-start: 2;
+                margin-top: 0;
             }
 
             @include mobile{
@@ -117,15 +112,15 @@
         }
 
         &-image {
+            overflow: hidden;
+            margin-bottom: 42px;
             width: 580px;
             height: 434px;
-            margin-bottom: 42px;
-            overflow: hidden;
 
             @include tablet {
+                margin-bottom: 32px;
                 width: 446px;
                 height: 280px;
-                margin-bottom: 32px;
             }
 
             @include mobile{
@@ -135,9 +130,9 @@
 
             & img {
                 @include tablet {
+                    border-radius: 11px 11px 0 0;
                     width: 446px;
                     height: 280px;
-                    border-radius: 11px 11px 0 0;
                 }
 
                 @include mobile{
@@ -148,9 +143,9 @@
         }
 
         &-price {
-            font-weight: 700;
-            margin: 48px 0 14px;
             position: relative;
+            margin: 48px 0 14px;
+            font-weight: 700;
 
             @include tablet {
                 margin-bottom: 24px;
@@ -165,9 +160,9 @@
             &::before {
                 content: '';
                 position: absolute;
-                width: 140px;
-                border: 1px solid var(--neutral-color-800);
                 top: -48px;
+                border: 1px solid var(--neutral-color-800);
+                width: 140px;
 
                 @include mobile{
                     top: -32px;
@@ -176,8 +171,8 @@
         }
 
         &-location {
-            font-weight: 600;
             margin-bottom: 60px;
+            font-weight: 600;
 
             @include tablet {
                 font-size: 24px;
@@ -196,37 +191,37 @@
             &::before {
                 content: '';
                 position: absolute;
-                border: 1px solid #070707;
-                max-width: 580px;
-                width: 100%;
-                opacity: 0.25;
                 top: -32px;
+                border: 1px solid #070707;
+                width: 100%;
+                max-width: 580px;
+                opacity: 0.25;
             }
 
             &-square,
             &-bedroom,
             &-bathroom {
-                max-width: 180px;
+                border-radius: 5px;
                 width: 100%;
                 height: 52px;
-                background-color: var(--neutral-color-200);
+                max-width: 180px;
                 font-weight: 600;
                 font-size: 20px;
-                border-radius: 5px;
+                background-color: var(--neutral-color-200);
 
                 @include flex-all-center;
 
                 @include  tablet{
-                    max-width: 138px;
                     width: 100%;
                     height: 48px;
+                    max-width: 138px;
                     font-size: 18px;
                 }
 
                 @include mobile{
-                    max-width: 102px;
                     width: 100%;
                     height: 44px;
+                    max-width: 102px;
                     font-size: 14px;
                 }
             }
@@ -235,26 +230,30 @@
                 position: relative;
                 display: flex;
                 gap: 10px;
-                //padding-left: 49px;
+
+                // padding-left: 49px;
 
                 @include mobile{
                     gap: 8px;
                 }
 
                 &::before {
-                    content: url(./assets/icons/square-icon.svg);
+                    content: url("./assets/icons/square-icon.svg");
                     display: inline-block;
-                    //height: 22.5px;
+
+                    // height: 22.5px;
                     margin-bottom: -1px;
-                    //position: absolute;
-                    //left: 23px;
-                    //top: 13px;
+
+                    // position: absolute;
+                    // left: 23px;
+                    // top: 13px;
                 }
             }
 
             &-bedroom {
                 position: relative;
-                //padding-left: 30px;
+
+                // padding-left: 30px;
                 display: flex;
                 gap: 10px;
 
@@ -263,11 +262,12 @@
                 }
 
                 &::before {
-                    content: url(./assets/icons/bedroom-icon.svg);
-                    //position: absolute;
-                    display: inline-block;
-                    left: 60px;
+                    content: url("./assets/icons/bedroom-icon.svg");
                     top: 12px;
+                    left: 60px;
+
+                    // position: absolute;
+                    display: inline-block;
                 }
             }
 
@@ -281,9 +281,10 @@
                 }
 
                 &::before {
-                    content: url(./assets/icons/bathroom-icon.svg);
+                    content: url("./assets/icons/bathroom-icon.svg");
                     display: inline-block;
-                    //position: absolute;
+
+                    // position: absolute;
                 }
             }
         }
