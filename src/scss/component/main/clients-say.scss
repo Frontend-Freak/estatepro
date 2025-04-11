@@ -1,0 +1,89 @@
+.clients-say {
+    background-image: url(../assets/image/clients-say-bg.jpg);
+    padding: 120px 0;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin-bottom: 49px;
+    }
+
+    &__body {
+        position: relative;
+        margin-bottom: 60px;
+
+        &-image {
+            width: 900px;
+            height: 570px;
+        }
+
+        &-card {
+            width: 580px;
+            height: 402px;
+            position: absolute;
+            background-color: var(--neutral-color-100);
+            right: 0px;
+            top: calc(50% - 201px);
+            border: 1px solid var(--neutral-color-400);
+            border-radius: 12px;
+            padding: 40px 48px;
+
+            &__title {
+                font-weight: 600;
+                width: 403px;
+                margin-bottom: 32px;
+            }
+
+            &__text {
+                font-weight: 500;
+                line-height: 1.8;
+                margin-bottom: 32px;
+            }
+
+            &__author {
+                @include flex-align-center;
+
+                gap: 45px;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    border: 1px solid var(--neutral-color-400);
+                    width: 32px;
+                    height: 2px;
+                    left: 65px;
+                    top: 27px;
+                }
+
+                &-name {
+                    font-weight: 600;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    &__button {
+        position: relative;
+        margin: 0 auto;
+        border-radius: 5px;
+        padding: 16px 69px 16px 32px;
+        max-width: 206px;
+        width: 100%;
+        background-color: var(--primary-color-1);
+        font-weight: 600;
+        text-transform: capitalize;
+        color: var(--neutral-color-100);
+
+        &::before{
+            position: absolute;
+            content: url(../assets/icons/arrow-right-long-white.svg);
+            right: 29px;
+            top: calc(50% - 11px);
+        }
+    }
+}
