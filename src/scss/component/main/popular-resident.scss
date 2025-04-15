@@ -2,7 +2,7 @@
     padding: 120px 0;
 
     @include tablet {
-        padding: 100px 0;
+        padding: 100px 0 40px;
     }
 
     &__container {
@@ -86,7 +86,7 @@
 
             @include tablet {
                 grid-column-start: 1;
-                grid-row-start: 2;
+                grid-row-start: 3;
             }
 
             @include mobile{
@@ -101,7 +101,7 @@
 
             @include tablet {
                 grid-column-start: 2;
-                grid-row-start: 2;
+                grid-row-start: 3;
                 margin-top: 0;
             }
 
