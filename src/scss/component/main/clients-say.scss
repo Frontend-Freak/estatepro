@@ -43,18 +43,15 @@
         }
 
         &-image {
-            width: 900px;
             height: 570px;
             border-radius: 12px;
             overflow: hidden;
 
             @include tablet {
-                width: 924px;
                 height: 570px;
             }
 
             @include mobile {
-                width: 390px;
                 height: 480px;
             }
 
